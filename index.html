@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -15,28 +13,31 @@
 </head>
 
 <body>
-
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Otology</a>
+  </nav>
   <div class="container">
-    <h1> Ear Disease Detection</h1>
+    <h1 class="mb-5"><b> Ear Disease Detection</b></h1>
     <!-- <input id="urlText" /> -->
-    <input type="file" id="file-select" name="photos[]" class="select_photos mt-5"/>
+    <!-- <button type="file"  name="photos[]"
+             onclick="document.getElementById('file-select').click()"
+            class="btn btn-info">Upload</button> -->
+    <input type="file" id="file-select" name="photos[]" class="btn btn-info select_photos mt-5"/>
     <br />
-    <button type="button" name="button" id="sendData" class="btn btn-primary mt-5">Predict</button>
+    <button type="button" name="button" id="sendData" class="btn btn-success mt-3">Predict</button>
 
-      <h5> Prediction: <span id="result"></span> </h5>
+      <h5> Prediction: <span id="prediction"></span> </h5>
+      <h5> Confidence: <span id="confidence"></span> </h5>
 
   </div>
 
-
-
-
-
-    <!-- SCRIPTS -->
-    <script
-    src="https://code.jquery.com/jquery-3.4.0.js"
-    integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
-    crossorigin="anonymous"></script>
-
-    <script src="index.js"> </script>
 </body>
+<!-- SCRIPTS -->
+<script
+src="https://code.jquery.com/jquery-3.4.0.js"
+integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+crossorigin="anonymous"></script>
+
+<script src="index.js"> </script>
+
 </html>

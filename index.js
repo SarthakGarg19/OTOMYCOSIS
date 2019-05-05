@@ -22,7 +22,7 @@ $(document).ready(()=>{
     $.ajax({
       "async": true,
       "crossDomain": true,
-      "url": "http://localhost:5000/api/v0.1/inference",
+      "url": "https://otology.herokuapp.com/api/v0.1/inference",
       "method": "POST",
       "headers": {
         "cache-control": "no-cache"
@@ -34,6 +34,8 @@ $(document).ready(()=>{
       "success": function(data) {
         // DISPLAYING THE RESULT
         data = JSON.parse(data);
+        document.getElementById('prediction').innerHTML = data.prediction;
+        document.getElementById('confidence').innerHTML = data.confidence;
         console.log(data);
         console.log(data["prediction"])
         document.getElementById('result').innerHTML = data["prediction"];
