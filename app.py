@@ -2,7 +2,7 @@ from flask import Flask,request, jsonify
 from flask_restful import Resource, reqparse, Api
 from flask_cors import CORS
 import os
-import cv2
+# import cv2
 # data analysis and wrangling
 import pandas as pd
 import numpy as np
@@ -69,21 +69,13 @@ def inference():
             print(file.filename)
             file.save(file.filename)
             imagePath = file.filename
-            # imagePath = os.path.join(os.pardir, file.filename)
-            # file.save(os.path.join(os.pardir, file.filename))
-            image = cv2.imread(imagePath)
-            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-            mask = gray>100
-            image = image[np.ix_(mask.any(1),mask.any(0))]
+            image1 = image.load_img(imagePath,target_size=(224,224,3))
 
-            image = cv2.resize(image, (224,224))
-            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+            image1= np.array(image1, dtype="float") / 255.0
 
-            image= np.array(image, dtype="float") / 255.0
-
-            image = np.expand_dims(image, axis=0)
+            image1 = np.expand_dims(image1, axis=0)
             model = load_kmodel()
-            prediction=model.predict([image])
+            prediction=model.predict([image1])
             prediction=np.argmax(prediction)
             if(prediction==0):
                 prediction="AOM"
