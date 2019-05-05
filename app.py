@@ -2,6 +2,7 @@ from flask import Flask,request, jsonify
 from flask_restful import Resource, reqparse, Api
 from flask_cors import CORS
 import os
+import cv2
 # data analysis and wrangling
 import pandas as pd
 import numpy as np
@@ -33,7 +34,7 @@ api = Api(app)
 # Loading Models and Transformers
 
 def load_kmodel():
-    model = load_model('oto.h5')
+    model = load_model('my_model_44.h5')
     model.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
     return model
 
@@ -67,30 +68,46 @@ def inference():
             # return redirect(request.url)
         if file:
             print(file.filename)
-            # file.save(file.filename)
-            file.save(os.path.join(os.pardir, file.filename))
+            file.save(file.filename)
             imagePath = file.filename
-            test = pd.read_csv('test.csv')
-            test_image = []
-            for i in tqdm(range(test.shape[0])):
-                # img = image.load_img(test['id'][i].astype('str')+'.png', target_size=(28,28,1), grayscale=True)
-                img = image.load_img(imagePath, target_size=(28,28,1), grayscale=True)
-                img = image.img_to_array(img)
-                img = img/255
-                test_image.append(img)
-            test = np.array(test_image)
-            model = load_kmodel()
+            # imagePath = os.path.join(os.pardir, file.filename)
+            # file.save(os.path.join(os.pardir, file.filename))
+            image = cv2.imread(imagePath)
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            mask = gray>100
+            image = image[np.ix_(mask.any(1),mask.any(0))]
 
-            prediction = model.predict_classes([test])
-            if(prediction[0]==4):
-                assign="A"
-                assign="CSOM"
+            image = cv2.resize(image, (224,224))
+            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+            image= np.array(image, dtype="float") / 255.0
+
+            image = np.expand_dims(image, axis=0)
+            model = load_kmodel()
+            prediction=model.predict([image])
+            prediction=np.argmax(prediction)
+            if(prediction==0):
+                prediction="AOM"
+            elif(prediction==6):
+                prediction="CSOM"
+            elif(prediction==2):
+                prediction="Wax"
+            elif(prediction==3):
+                prediction="Glue Ear"
+            elif(prediction==4):
+                prediction="Normal Ear"
+            elif(prediction==5):
+                prediction="Others"
+            elif(prediction==6):
+                prediction="Otomycosis"
+
+
             # CLEARING SESSION FOR MODEL TO LOAD AGAIN
             K.clear_session()
 
             # RETURNING PREDICTION
             return jsonify({
-                "prediction":str(assign)
+                "prediction":str(prediction)
             })
     # if request.method == 'POST'
     # content = request.json
