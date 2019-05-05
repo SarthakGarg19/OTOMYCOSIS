@@ -76,10 +76,12 @@ def inference():
             image1 = np.expand_dims(image1, axis=0)
             model = load_kmodel()
             prediction=model.predict([image1])
+            confidence = np.amax(prediction)
             prediction=np.argmax(prediction)
+            # confidence = np.amax(prediction)
             if(prediction==0):
                 prediction="AOM"
-            elif(prediction==6):
+            elif(prediction==1):
                 prediction="CSOM"
             elif(prediction==2):
                 prediction="Wax"
@@ -98,7 +100,8 @@ def inference():
 
             # RETURNING PREDICTION
             return jsonify({
-                "prediction":str(prediction)
+                "prediction":str(prediction),
+                "confidence":str(confidence)
             })
     # if request.method == 'POST'
     # content = request.json
