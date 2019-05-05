@@ -1,6 +1,7 @@
 from flask import Flask,request, jsonify
 from flask_restful import Resource, reqparse, Api
 from flask_cors import CORS
+import os
 # data analysis and wrangling
 import pandas as pd
 import numpy as np
@@ -66,7 +67,8 @@ def inference():
             # return redirect(request.url)
         if file:
             print(file.filename)
-            file.save(file.filename)
+            # file.save(file.filename)
+            file.save(os.path.join(os.pardir, file.filename))
             imagePath = file.filename
             test = pd.read_csv('test.csv')
             test_image = []
@@ -78,13 +80,17 @@ def inference():
                 test_image.append(img)
             test = np.array(test_image)
             model = load_kmodel()
+
             prediction = model.predict_classes([test])
+            if(prediction[0]==4):
+                assign="A"
+                assign="CSOM"
             # CLEARING SESSION FOR MODEL TO LOAD AGAIN
             K.clear_session()
 
             # RETURNING PREDICTION
             return jsonify({
-                "prediction":str(prediction[0])
+                "prediction":str(assign)
             })
     # if request.method == 'POST'
     # content = request.json

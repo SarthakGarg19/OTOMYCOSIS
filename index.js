@@ -1,7 +1,7 @@
 $(document).ready(()=>{
 
-    $('#sendData').click(function(){
-
+    $('#sendData').click(function(e){
+      e.preventDefault();
     // Storing the URL
     // var imgData = $('#urlText').val();
     var fileSelect = document.getElementById('file-select');
@@ -25,8 +25,7 @@ $(document).ready(()=>{
       "url": "http://localhost:5000/api/v0.1/inference",
       "method": "POST",
       "headers": {
-        "cache-control": "no-cache",
-        "postman-token": "91a0d5be-9674-4788-6682-93a0ae049d3d"
+        "cache-control": "no-cache"
       },
       "processData": false,
       "contentType": false,
