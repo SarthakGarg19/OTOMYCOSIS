@@ -16,7 +16,6 @@ from keras.preprocessing import image
 from tqdm import tqdm
 import tensorflow as tensorflow
 from keras.preprocessing import image
-from IPython.display import display
 from PIL import Image
 tensorflow.logging.set_verbosity(tensorflow.logging.ERROR)
 from keras import backend as K
