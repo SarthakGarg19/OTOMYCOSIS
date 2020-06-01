@@ -1,6 +1,6 @@
 ## Ear Disease Detection
 
-# Introduction
+## Introduction
 
 Otitis Media (OM) is an infection of the middle ear. It is one of the most common childhood illnesses and the second most important reason leading to the loss of hearing. It is most common in developing countries and was ranked fifth on the global burden of disease and affected 1.23 billion people in 2013.
 
