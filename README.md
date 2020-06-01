@@ -16,7 +16,8 @@ We obtained the ear disease dataset from an ENT doctor from AIMS. The dataset co
 
 
 ## Deployment
-'''
+```
 We have developed a webapp using Flask API and have deployed it on Heroku that enables us to operate entirely on cloud.
 We have developed a front-end for the website which could be accessed by [clicking here!](https://otology.netlify.com)
-'''
+```
+
