@@ -5,7 +5,9 @@
 Otitis Media (OM) is an infection of the middle ear. It is one of the most common childhood illnesses and the second most important reason leading to the loss of hearing. It is most common in developing countries and was ranked fifth on the global burden of disease and affected 1.23 billion people in 2013.
 
 
-A classiffcation model is trained using Deep Learning, we tried several deep learning model architectures such as AlexNet, VGG16, InceptionV3 and Resnet-50. Framework used is Keras. Best performance is achieved by ResNet-50 with pre-trained weights of imagenet dataset, this model is deployed on a website for anyone to test. 
+A classiffcation model is trained using Deep Learning, we tried several deep learning model architectures such as AlexNet, VGG16, InceptionV3 and Resnet-50. Best performance is achieved by ResNet-50 with pre-trained weights of imagenet dataset, this model is deployed on a website for anyone to test. 
+
+
 
 ## Deployment
 
