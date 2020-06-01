@@ -9,7 +9,7 @@ A classiffcation model is trained using Deep Learning, we tried several deep lea
 
 ## Dataset Description
 
-We obtained the ear disease dataset from an ENT doctor from AIMS. The dataset consists on 120 images with 7 classes. Details of the classes: ![alt text](https://github.com/SarthakGarg13/OTOMYCOSIS/master/images/Dataset_Decription.png?raw=true)
+We obtained the ear disease dataset from an ENT doctor from AIMS. The dataset consists on 120 images with 7 classes. Details of the classes: ![alt text](images/Dataset_Description.png?raw=true)
 
 
 
