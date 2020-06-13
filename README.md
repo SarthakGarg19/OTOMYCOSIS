@@ -70,7 +70,7 @@ Using keras.applications for initilizing model architecture with resnet weights.
       <td><c><img src="https://github.com/SarthakGarg13/OTOMYCOSIS/blob/master/images/retracted.JPG" width="200"/></c></td>
 <td><img src="https://github.com/SarthakGarg13/OTOMYCOSIS/blob/master/images/wax.jpg" width="200"/></td>
     </tr>
-    <tr><td align="center">Normal Ear</td><td align="center">Glue Ear</td></tr>
+    <tr><td align="center">Retracted Typanic Membrane</td><td align="center">Wax</td></tr>
 </table>
 
 
