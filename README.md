@@ -27,10 +27,8 @@ One of the biggest challenge faced during the project was the collection of imag
 <td><img src="https://github.com/SarthakGarg13/OTOMYCOSIS/blob/master/images/glue_ear.jpg" width="205"/></td>
 <td><img src="https://github.com/SarthakGarg13/OTOMYCOSIS/blob/master/images/otomycosis.jpg" width="200"/></td>
     </tr>
-    <tr><td align="center">original image</td><td align="center">90 degree rotation</td><td align="center">180 degree rotation</td></tr>
+    <tr><td align="center">Normal Ear</td><td align="center">Glue Ear</td><td align="center">Otomycosis</td></tr>
 </table>
-
-
 
 
 ## Building a CNN
@@ -51,7 +49,6 @@ The most common incarnation of transfer learning in the context of deep learning
 - Add some new, trainable layers on top of the frozen layers. They will learn to turn the old features into predictions on a new dataset.
 - Train the new layers on your dataset.
 
-Using keras.applications for initilising model architecture with resnet weights.
 
 ```tf.keras.applications.ResNet50(
     include_top=True,
@@ -63,6 +60,19 @@ Using keras.applications for initilising model architecture with resnet weights.
     **kwargs)
 ```
 Instantiates the ResNet50 architecture.
+
+Using keras.applications for initilizing model architecture with resnet weights. Similarly we used InceptionV3 and EfficientNetB0 from keras applications and used imagenet weights for initialization.
+
+## Results
+
+<table>
+    <tr>
+      <td><c><img src="https://github.com/SarthakGarg13/OTOMYCOSIS/blob/master/images/retracted.JPG" width="200"/></c></td>
+<td><img src="https://github.com/SarthakGarg13/OTOMYCOSIS/blob/master/images/wax.jpg" width="200"/></td>
+    </tr>
+    <tr><td align="center">Normal Ear</td><td align="center">Glue Ear</td></tr>
+</table>
+
 
 
 ## Deployment
