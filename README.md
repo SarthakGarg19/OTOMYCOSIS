@@ -75,13 +75,12 @@ Using keras.applications for initilizing model architecture with resnet weights.
 </table>
 
 
-
 ## Deployment
 
 We have developed a webapp using Flask API and have deployed it on Heroku that enables us to operate entirely on cloud.
 A front-end for the website has been deployed on Netlify which could be accessed by [clicking here!](https://otology.netlify.com)
 
-![alt text](images/website.jpg?raw=true "Prototype Website")
+![alt text](images/website.png?raw=true "Prototype Website")
 
 
 
