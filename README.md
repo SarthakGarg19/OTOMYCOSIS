@@ -21,7 +21,7 @@ One of the biggest challenge faced during the project was the collection of imag
 
 ## Glimplse into the dataset    
 
-<table>
+<table align="center">
     <tr>
       <td><img src="https://github.com/SarthakGarg13/OTOMYCOSIS/blob/master/images/normalear.JPG" width="200"/></td>
 <td><img src="https://github.com/SarthakGarg13/OTOMYCOSIS/blob/master/images/glue_ear.jpg" width="205"/></td>
