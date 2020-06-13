@@ -25,6 +25,32 @@ Now we are ready to build a CNN. After dabbling a bit with tensorflow, I decided
 
 ![alt text](images/cnn.png?raw=true)
 
+## Transfer Learning
+Transfer learning consists of taking features learned on one problem, and leveraging them on a new, similar problem. For instance, features from a model that has learned to identify racoons may be useful to kick-start a model meant to identify tanukis.
+
+Transfer learning is usually done for tasks where your dataset has too little data to train a full-scale model from scratch.
+
+The most common incarnation of transfer learning in the context of deep learning is the following worfklow:
+
+- Take layers from a previously trained model.
+- Freeze them, so as to avoid destroying any of the information they contain during future training rounds.
+- Add some new, trainable layers on top of the frozen layers. They will learn to turn the old features into predictions on a new dataset.
+- Train the new layers on your dataset.
+
+```
+tf.keras.applications.ResNet50(
+    include_top=True,
+    weights="imagenet",
+    input_tensor=None,
+    input_shape=None,
+    pooling=None,
+    classes=1000,
+    **kwargs
+    
+)
+```
+Instantiates the ResNet50 architecture.
+
 
 ## Deployment
 
