@@ -19,7 +19,7 @@ One of the biggest challenge faced during the project was the collection of imag
 
 ![alt text](images/Dataset_Description.png?raw=true)
 
-## Glimplse into the dataset    
+### Glimplse into the dataset    
 
 <table>
     <tr align = "center">
