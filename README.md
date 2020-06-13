@@ -10,7 +10,7 @@ The aim of the study is to develop a diagnostic system using Ear Drum (Tympanic 
 This diagnostic system will provide a reliable data to a survey volunteer to advise the patient or his family to visit an ENT or take professional help if OM is present.
 
 
-<img src="https://3.bp.blogspot.com/-WBPelBryAoE/WrJhXwz5XtI/AAAAAAAAEPA/iMSU4TXcNWIe7jK2G3P6xo4Ls4DWisbTgCLcBGAs/s1600/wix%2B11.jpg" width="400">
+<img src="https://3.bp.blogspot.com/-WBPelBryAoE/WrJhXwz5XtI/AAAAAAAAEPA/iMSU4TXcNWIe7jK2G3P6xo4Ls4DWisbTgCLcBGAs/s1600/wix%2B11.jpg" width="400" title="Anatomy of the Ear">
 
 
 ## Dataset Description
@@ -66,6 +66,7 @@ Using keras.applications for initilizing model architecture with resnet weights.
 
 ## Results
 
+<p align = "center">
 <table>
     <tr>
       <td align="center"><img src="https://github.com/SarthakGarg13/OTOMYCOSIS/blob/master/images/retracted.JPG" width="200"/></c></td>
@@ -73,7 +74,7 @@ Using keras.applications for initilizing model architecture with resnet weights.
     </tr>
     <tr><td align="center">Retracted Typanic Membrane</td><td align="center">Wax</td></tr>
 </table>
-
+</p>
 
 ## Deployment
 
@@ -85,7 +86,9 @@ A front-end for the website has been deployed on Netlify which could be accessed
 ## References
 
 - https://core.ac.uk/download/pdf/161426117.pdf
-- https://reader.elsevier.com/reader/sd/pii/S2352396419304311?token=651ACC28BC0595F0F4514BEF072813F59780B855EFF9FEB1889E1DC32905E069A186428FA14DF1AB62679B2F30409FAD
+- https://www.sciencedirect.com/science/article/pii/S2352396419304311
+- https://arxiv.org/abs/1512.03385
+- https://medium.com/bhavaniravi/build-your-1st-python-web-app-with-flask-b039d11f101c
 - https://keras.io/api/applications/inceptionv3/
 
 
