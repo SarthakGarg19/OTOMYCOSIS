@@ -5,7 +5,7 @@
 Otitis Media (OM) is an infection of the middle ear. It is one of the most common childhood illnesses and the second most important reason leading to the loss of hearing. It is most common in developing countries and was ranked fifth on the global burden of disease and affected 1.23 billion people in 2013.
 
 
-![Anatomy of the ear](https://3.bp.blogspot.com/-WBPelBryAoE/WrJhXwz5XtI/AAAAAAAAEPA/iMSU4TXcNWIe7jK2G3P6xo4Ls4DWisbTgCLcBGAs/s1600/wix%2B11.jpg = 250x250)
+<img src="https://3.bp.blogspot.com/-WBPelBryAoE/WrJhXwz5XtI/AAAAAAAAEPA/iMSU4TXcNWIe7jK2G3P6xo4Ls4DWisbTgCLcBGAs/s1600/wix%2B11.jpg" width="48">
 
 
 ## Dataset Description
