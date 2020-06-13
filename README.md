@@ -50,7 +50,8 @@ The most common incarnation of transfer learning in the context of deep learning
 - Train the new layers on your dataset.
 
 
-```tf.keras.applications.ResNet50(
+```
+tf.keras.applications.ResNet50(
     include_top=True,
     weights="imagenet",
     input_tensor=None,
@@ -67,8 +68,8 @@ Using keras.applications for initilizing model architecture with resnet weights.
 
 <table>
     <tr>
-      <td><c><img src="https://github.com/SarthakGarg13/OTOMYCOSIS/blob/master/images/retracted.JPG" width="200"/></c></td>
-<td><img src="https://github.com/SarthakGarg13/OTOMYCOSIS/blob/master/images/wax.jpg" width="200"/></td>
+      <td align="center"><img src="https://github.com/SarthakGarg13/OTOMYCOSIS/blob/master/images/retracted.JPG" width="200"/></c></td>
+<td align="center"><img src="https://github.com/SarthakGarg13/OTOMYCOSIS/blob/master/images/wax.jpg" width="200"/></td>
     </tr>
     <tr><td align="center">Retracted Typanic Membrane</td><td align="center">Wax</td></tr>
 </table>
@@ -79,5 +80,9 @@ Using keras.applications for initilizing model architecture with resnet weights.
 
 We have developed a webapp using Flask API and have deployed it on Heroku that enables us to operate entirely on cloud.
 A front-end for the website has been deployed on Netlify which could be accessed by [clicking here!](https://otology.netlify.com)
+
+![alt text](images/website.jpg?raw=true "Prototype Website")
+
+
 
 
