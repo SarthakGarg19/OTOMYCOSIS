@@ -21,10 +21,10 @@ One of the biggest challenge faced during the project was the collection of imag
 
 ## Glimplse into the dataset    
 
-<p float="left">
-  <img src="images/normalear.JPG" width="100" />
-  <img src="images/glue_ear.jpg" width="100" /> 
-  <img src="images/otomycosis.jpg width="100" />
+<p float="center">
+  <img src="images/normalear.JPG" width="300" />
+  <img src="images/glue_ear.jpg" width="300" /> 
+  <img src="images/otomycosis.jpg width="300" />
 </p>
 
 
