@@ -5,7 +5,8 @@
 Otitis Media (OM) is an infection of the middle ear. It is one of the most common childhood illnesses and the second most important reason leading to the loss of hearing. It is most common in developing countries and was ranked fifth on the global burden of disease and affected 1.23 billion people in 2013.
 
 
-A classiffcation model is trained using Deep Learning, we tried several deep learning model architectures such as AlexNet, VGG16, InceptionV3 and Resnet-50. Best performance is achieved by ResNet-50 with pre-trained weights of imagenet dataset, this model is deployed on a website for anyone to test. 
+![Anatomy of the ear](https://3.bp.blogspot.com/-WBPelBryAoE/WrJhXwz5XtI/AAAAAAAAEPA/iMSU4TXcNWIe7jK2G3P6xo4Ls4DWisbTgCLcBGAs/s1600/wix%2B11.jpg)
+
 
 ## Dataset Description
 
@@ -13,6 +14,15 @@ We obtained the ear disease dataset from an ENT doctor from AIMS. The dataset co
 
 
 ![alt text](images/Dataset_Description.png?raw=true)
+
+## Building a CNN
+
+Now we are ready to build a CNN. After dabbling a bit with tensorflow, I decided it was way too much work for something incredibly simple. I decided to use keras. Keras is a high-level API wrapper around tensorflow. It made coding lot more palatable. The approach I used was similar to this. I used a 3 convolutional layers in my architecture initially.
+
+![alt text](images/cnn.png?raw=true)
+
+Figure
+5 : (a) general CNN b ) co nvolutional filter (c) pooling window
 
 
 
