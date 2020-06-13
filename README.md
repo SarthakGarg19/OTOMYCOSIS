@@ -15,8 +15,7 @@ This diagnostic system will provide a reliable data to a survey volunteer to adv
 
 ## Dataset Description
 
-We obtained the ear disease dataset from an ENT doctor from AIMS. The dataset consists on 120 images with 7 classes. Details of the classes: 
-
+One of the biggest challenge faced during the project was the collection of image data for normal and infected tympanic membrane. We obtained the ear disease dataset from an ENT doctor  AIMS. The dataset consists on 120 images with 7 classes. Details of the classes: 
 
 ![alt text](images/Dataset_Description.png?raw=true)
 
@@ -25,10 +24,6 @@ We obtained the ear disease dataset from an ENT doctor from AIMS. The dataset co
 Now we are ready to build a CNN. After dabbling a bit with tensorflow, I decided it was way too much work for something incredibly simple. I decided to use keras. Keras is a high-level API wrapper around tensorflow. It made coding lot more palatable. The approach I used was similar to this. I used a 3 convolutional layers in my architecture initially.
 
 ![alt text](images/cnn.png?raw=true)
-
-Figure
-5 : (a) general CNN b ) co nvolutional filter (c) pooling window
-
 
 
 ## Deployment
