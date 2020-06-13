@@ -19,11 +19,15 @@ One of the biggest challenge faced during the project was the collection of imag
 
 ![alt text](images/Dataset_Description.png?raw=true)
 
+## Glimplse into the dataset    
+
+![alt-text-1](images/normalear.JPG "Normal Ear") ![alt-text-2](images/glue_ear.jpg "Glue Ear")  ![alt-text-3](images/otomycosis.jpg "Otomycosis")
+
 ## Building a CNN
 
 Now we are ready to build a CNN. After dabbling a bit with tensorflow, I decided it was way too much work for something incredibly simple. I decided to use keras. Keras is a high-level API wrapper around tensorflow. It made coding lot more palatable. The approach I used was similar to this. I used a 3 convolutional layers in my architecture initially.
 
-![alt text](images/cnn.png?raw=true)
+![alt text](images/cnn.png?raw=true "CNN Architecture")
 
 ## Transfer Learning
 Transfer learning consists of taking features learned on one problem, and leveraging them on a new, similar problem. For instance, features from a model that has learned to identify racoons may be useful to kick-start a model meant to identify tanukis.
@@ -37,17 +41,16 @@ The most common incarnation of transfer learning in the context of deep learning
 - Add some new, trainable layers on top of the frozen layers. They will learn to turn the old features into predictions on a new dataset.
 - Train the new layers on your dataset.
 
-```
-tf.keras.applications.ResNet50(
+Using keras.applications for initilising model architecture with resnet weights.
+
+```tf.keras.applications.ResNet50(
     include_top=True,
     weights="imagenet",
     input_tensor=None,
     input_shape=None,
     pooling=None,
     classes=1000,
-    **kwargs
-    
-)
+    **kwargs)
 ```
 Instantiates the ResNet50 architecture.
 
