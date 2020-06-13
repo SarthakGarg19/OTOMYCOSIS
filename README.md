@@ -62,7 +62,7 @@ tf.keras.applications.ResNet50(
 ```
 Instantiates the ResNet50 architecture.
 
-Using keras.applications for initilizing model architecture with resnet weights. Similarly we used InceptionV3 and EfficientNetB0 from keras applications and used imagenet weights for initialization.
+Using keras.applications for initilizing model architecture with imagenet weights. Similarly we used InceptionV3 and EfficientNetB0 from keras applications and used imagenet weights for initialization.
 
 ## Results
 
