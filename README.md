@@ -82,6 +82,12 @@ A front-end for the website has been deployed on Netlify which could be accessed
 
 ![alt text](images/website.png?raw=true "Prototype Website")
 
+## References
+
+- https://core.ac.uk/download/pdf/161426117.pdf
+- https://reader.elsevier.com/reader/sd/pii/S2352396419304311?token=651ACC28BC0595F0F4514BEF072813F59780B855EFF9FEB1889E1DC32905E069A186428FA14DF1AB62679B2F30409FAD
+- https://keras.io/api/applications/inceptionv3/
+
 
 
 
