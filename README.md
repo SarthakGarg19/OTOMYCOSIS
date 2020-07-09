@@ -15,9 +15,9 @@ This diagnostic system will provide a reliable data to a survey volunteer to adv
 
 ## Dataset Description
 
-One of the biggest challenge faced during the project was the collection of image data for normal and infected tympanic membrane. We obtained the ear disease dataset from an ENT doctor  AIMS. The dataset consists on 300 images with 7 classes. Details of the classes: 
+One of the biggest challenge faced during the project was the collection of image data for normal and infected tympanic membrane. We obtained the ear disease dataset from an ENT doctor at AIMS. The dataset consists oof around 250 images with 6 classes. Details of the classes: 
 
-![alt text](images/Dataset_Description.png?raw=true)
+![alt text](images/dataset.JPG?raw=true)
 
 ### Glimplse into the dataset    
 
@@ -62,7 +62,7 @@ tf.keras.applications.ResNet50(
 ```
 Instantiates the ResNet50 architecture.
 
-Using keras.applications for initilizing model architecture with imagenet weights. Similarly we used InceptionV3 and EfficientNetB0 from keras applications and used imagenet weights for initialization.
+Using keras.applications for initilizing model architecture with imagenet weights. Similarly we used InceptionResnetV2 and VGG16 from keras applications and used imagenet weights for initialization.
 
 ## Results
 
